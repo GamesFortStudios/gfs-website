@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Fort Studios - Premium Game Development</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-gamepad"></i> Games Fort Studios
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" onclick="showPage('home')">Home</a></li>
+                <li class="nav-item"><a href="#" onclick="showPage('about')">About</a></li>
+                <li class="nav-item"><a href="#" onclick="showPage('games')">Games</a></li>
+                <li class="nav-item"><a href="#" onclick="showPage('what-we-do')">What We Do</a></li>
+                <li class="nav-item"><a href="#" onclick="showPage('gallery')">Gallery</a></li>
+                <li class="nav-item"><a href="#" onclick="showPage('contact')">Contact Us</a></li>
+                <li class="nav-item"><a href="#" onclick="showPage('privacy')">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <div class="container">
+            <div class="hero">
+                <div class="floating-elements">
+                    <div class="game-icon"><i class="fas fa-dice"></i></div>
+                    <div class="game-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="game-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="game-icon"><i class="fas fa-star"></i></div>
+                    <div class="game-icon"><i class="fas fa-crown"></i></div>
+                </div>
+                <h1>Welcome to Games Fort Studios</h1>
+                <p>Where Gaming Dreams Come to Life!</p>
+                <p class="hero-subtitle">Creating immersive gaming experiences that captivate players worldwide</p>
+                <a href="#" onclick="showPage('games')" class="cta-button">
+                    <i class="fas fa-play"></i> Explore Our Games
+                </a>
+            </div>
+
+            <div class="services-preview">
+                <h2>Our Expertise</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-gamepad service-icon"></i>
+                        <h3>Game Development</h3>
+                        <p>Full-scale game development from concept to launch</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-graduation-cap service-icon"></i>
+                        <h3>Educational Games</h3>
+                        <p>Learning made fun with interactive educational content</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-trophy service-icon"></i>
+                        <h3>Gamification</h3>
+                        <p>Transform business processes with engaging game mechanics</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-dice service-icon"></i>
+                        <h3>Casino Games</h3>
+                        <p>Exciting casino and gambling game experiences</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-film service-icon"></i>
+                        <h3>Animation</h3>
+                        <p>Stunning 2D and 3D animations for games and media</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <div class="container">
+            <div class="page-header">
+
+                <h1><i class="fas fa-users"></i> About Games Fort Studios</h1>
+                <p>Your trusted partner in gaming excellence</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-section">
+                    <h2>Our Story</h2>
+                    <p>Games Fort Studios was founded with a simple yet powerful vision: to create gaming experiences that transcend boundaries and bring people together. Since our inception, we've been at the forefront of gaming innovation, combining cutting-edge technology with creative storytelling to deliver unforgettable gaming experiences.</p>
+                    
+                    <div class="image-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Company Story Image Placeholder</p>
+                    </div>
+                </div>
+
+                <div class="about-section">
+                    <h2>Our Mission</h2>
+                    <p>To revolutionize the gaming industry by creating innovative, engaging, and accessible games that entertain, educate, and inspire players across the globe. We believe in the power of games to transform lives and create meaningful connections.</p>
+                </div>
+
+                <div class="team-section">
+                    <h2>Our Team</h2>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-image">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h3>Team Member 1</h3>
+                            <p>CEO And Founder</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-image">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h3>Team Member 2</h3>
+                            <p>Lead Developer</p>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-image">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h3>Team Member 3</h3>
+                            <p>Creative Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Games Page -->
+    <div id="games" class="page">
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-gamepad"></i> Our Games</h1>
+                <p>Discover our amazing gaming portfolio</p>
+            </div>
+            
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-image">
+                        <i class="fas fa-image"></i>
+                        <p>Game Screenshot Placeholder</p>
+                    </div>
+                    <div class="game-info">
+                        <h3>Adventure Quest</h3>
+                        <p>An epic adventure game with stunning visuals and immersive gameplay</p>
+                        <div class="game-tags">
+                            <span class="tag">Adventure</span>
+                            <span class="tag">RPG</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-image">
+                        <i class="fas fa-image"></i>
+                        <p>Game Screenshot Placeholder</p>
+                    </div>
+                    <div class="game-info">
+                        <h3>Math Master</h3>
+                        <p>Educational game that makes learning mathematics fun and engaging</p>
+                        <div class="game-tags">
+                            <span class="tag">Educational</span>
+                            <span class="tag">Puzzle</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-image">
+                        <i class="fas fa-image"></i>
+                        <p>Game Screenshot Placeholder</p>
+                    </div>
+                    <div class="game-info">
+                        <h3>Casino Nights</h3>
+                        <p>Experience the thrill of Las Vegas with our premium casino games</p>
+                        <div class="game-tags">
+                            <span class="tag">Casino</span>
+                            <span class="tag">Cards</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-image">
+                        <i class="fas fa-image"></i>
+                        <p>Game Screenshot Placeholder</p>
+                    </div>
+                    <div class="game-info">
+                        <h3>Productivity Hero</h3>
+                        <p>Gamified productivity app that makes work feel like play</p>
+                        <div class="game-tags">
+                            <span class="tag">Gamification</span>
+                            <span class="tag">Productivity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- What We Do Page -->
+    <div id="what-we-do" class="page">
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-cogs"></i> What We Do</h1>
+                <p>Our comprehensive gaming services</p>
+            </div>
+            
+            <div class="services-detailed">
+                <div class="service-detail">
+                    <div class="service-header">
+                        <i class="fas fa-gamepad"></i>
+                        <h2>Game Development</h2>
+                    </div>
+                    <p>We create full-featured games across multiple platforms including mobile, PC, and console. Our development process includes concept design, prototyping, development, testing, and deployment.</p>
+                    <div class="service-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Cross-platform development</li>
+                            <li><i class="fas fa-check"></i> Custom game engines</li>
+                            <li><i class="fas fa-check"></i> Multiplayer integration</li>
+                            <li><i class="fas fa-check"></i> Performance optimization</li>
+                        </ul>
+                    </div>
+                    <div class="image-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Game Development Process Image</p>
+                    </div>
+                </div>
+
+                <div class="service-detail">
+                    <div class="service-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h2>Educational Games</h2>
+                    </div>
+                    <p>We specialize in creating engaging educational games that make learning fun and effective. Our educational games cover various subjects and age groups.</p>
+                    <div class="service-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Curriculum-aligned content</li>
+                            <li><i class="fas fa-check"></i> Interactive learning modules</li>
+                            <li><i class="fas fa-check"></i> Progress tracking</li>
+                            <li><i class="fas fa-check"></i> Adaptive difficulty</li>
+                        </ul>
+                    </div>
+                    <div class="image-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Educational Games Showcase Image</p>
+                    </div>
+                </div>
+
+                <div class="service-detail">
+                    <div class="service-header">
+                        <i class="fas fa-trophy"></i>
+                        <h2>Gamification</h2>
+                    </div>
+                    <p>Transform your business processes with gamification. We add game elements to non-game contexts to increase engagement and motivation.</p>
+                    <div class="service-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Employee engagement systems</li>
+                            <li><i class="fas fa-check"></i> Customer loyalty programs</li>
+                            <li><i class="fas fa-check"></i> Training and onboarding</li>
+                            <li><i class="fas fa-check"></i> Performance analytics</li>
+                        </ul>
+                    </div>
+                    <div class="image-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Gamification Solutions Image</p>
+                    </div>
+                </div>
+
+                <div class="service-detail">
+                    <div class="service-header">
+                        <i class="fas fa-dice"></i>
+                        <h2>Casino Games</h2>
+                    </div>
+                    <p>Develop exciting casino and gambling games with stunning graphics, smooth gameplay, and secure payment integration.</p>
+                    <div class="service-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Slot machines</li>
+                            <li><i class="fas fa-check"></i> Card games</li>
+                            <li><i class="fas fa-check"></i> Live dealer games</li>
+                            <li><i class="fas fa-check"></i> Secure transactions</li>
+                        </ul>
+                    </div>
+                    <div class="image-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Casino Games Portfolio Image</p>
+                    </div>
+                </div>
+
+                <div class="service-detail">
+                    <div class="service-header">
+                        <i class="fas fa-film"></i>
+                        <h2>Animation</h2>
+                    </div>
+                    <p>Create stunning 2D and 3D animations for games, promotional materials, and interactive media.</p>
+                    <div class="service-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Character animation</li>
+                            <li><i class="fas fa-check"></i> Motion graphics</li>
+                            <li><i class="fas fa-check"></i> VFX and particles</li>
+                            <li><i class="fas fa-check"></i> Cinematic sequences</li>
+                        </ul>
+                    </div>
+                    <div class="image-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Animation Showcase Reel Image</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Page -->
+    <div id="gallery" class="page">
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-images"></i> Gallery</h1>
+                <p>Visual showcase of our work</p>
+            </div>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active" onclick="filterGallery('all')">All</button>
+                <button class="filter-btn" onclick="filterGallery('games')">Games</button>
+                <button class="filter-btn" onclick="filterGallery('animation')">Animation</button>
+                <button class="filter-btn" onclick="filterGallery('ui-ux')">UI/UX</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="games">
+                    <div class="gallery-image">
+                        <i class="fas fa-image"></i>
+                        <p>Game Screenshot 1</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Adventure Quest</h3>
+                        <p>In-game screenshot</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="animation">
+                    <div class="gallery-image">
+                        <i class="fas fa-film"></i>
+                        <p>Animation Preview</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Character Animation</h3>
+                        <p>3D character model</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="ui-ux">
+                    <div class="gallery-image">
+                        <i class="fas fa-mobile-alt"></i>
+                        <p>UI Design</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Game Interface</h3>
+                        <p>Mobile game UI</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="games">
+                    <div class="gallery-image">
+                        <i class="fas fa-gamepad"></i>
+                        <p>Gameplay Screenshot</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Casino Nights</h3>
+                        <p>Casino game interface</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="animation">
+                    <div class="gallery-image">
+                        <i class="fas fa-magic"></i>
+                        <p>VFX Animation</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Special Effects</h3>
+                        <p>Particle system demo</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="games">
+                    <div class="gallery-image">
+                        <i class="fas fa-puzzle-piece"></i>
+                        <p>Educational Game</p>
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Math Master</h3>
+                        <p>Educational gameplay</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-envelope"></i> Contact Us</h1>
+                <p>Let's create something amazing together</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Ready to start your next gaming project? We'd love to hear from you!</p>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>123 Gaming Street, Tech City, TC 12345</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+1 (555) 123-GAME</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>hello@gamesfortstudios.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Select Service</option>
+                                <option value="game-development">Game Development</option>
+                                <option value="educational-games">Educational Games</option>
+                                <option value="gamification">Gamification</option>
+                                <option value="casino-games">Casino Games</option>
+                                <option value="animation">Animation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Page -->
+    <div id="privacy" class="page">
+        <div class="container">
+            <div class="page-header">
+                <h1><i class="fas fa-shield-alt"></i> Privacy Policy</h1>
+                <p>Your privacy is important to us</p>
+            </div>
+            
+            <div class="privacy-content">
+                <div class="privacy-section">
+                    <h2>Information We Collect</h2>
+                    <p>At Games Fort Studios, we collect information that you provide directly to us, such as when you create an account, contact us, or use our games and services. This may include:</p>
+                    <ul>
+                        <li>Personal information (name, email address, phone number)</li>
+                        <li>Game progress and preferences</li>
+                        <li>Device information and usage data</li>
+                        <li>Communication preferences</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>How We Use Your Information</h2>
+                    <p>We use the information we collect to:</p>
+                    <ul>
+                        <li>Provide and improve our games and services</li>
+                        <li>Communicate with you about updates and new features</li>
+                        <li>Analyze usage patterns to enhance user experience</li>
+                        <li>Ensure the security and integrity of our services</li>
+                        <li>Comply with legal obligations</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>Information Sharing</h2>
+                    <p>We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this privacy policy. We may share information with:</p>
+                    <ul>
+                        <li>Service providers who assist in our operations</li>
+                        <li>Legal authorities when required by law</li>
+                        <li>Business partners for specific collaborative features</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>Data Security</h2>
+                    <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:</p>
+                    <ul>
+                        <li>Encryption of sensitive data</li>
+                        <li>Regular security assessments</li>
+                        <li>Limited access to personal information</li>
+                        <li>Secure server infrastructure</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>Your Rights</h2>
+                    <p>You have the right to:</p>
+                    <ul>
+                        <li>Access and update your personal information</li>
+                        <li>Request deletion of your data</li>
+                        <li>Opt out of marketing communications</li>
+                        <li>Request data portability</li>
+                        <li>File a complaint with supervisory authorities</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>Children's Privacy</h2>
+                    <p>We are committed to protecting the privacy of children. We do not knowingly collect personal information from children under 13 years of age without parental consent. If you believe we have collected information from a child under 13, please contact us immediately.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>Changes to This Policy</h2>
+                    <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the "last updated" date. Your continued use of our services after any changes indicates your acceptance of the updated policy.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>Contact Us</h2>
+                    <p>If you have any questions about this privacy policy or our privacy practices, please contact us at:</p>
+                    <div class="contact-details">
+                        <p><strong>Email:</strong> privacy@gamesfortstudios.com</p>
+                        <p><strong>Phone:</strong> +1 (555) 123-GAME</p>
+                        <p><strong>Address:</strong> 123 Gaming Street, Tech City, TC 12345</p>
+                    </div>
+                </div>
+
+                <div class="last-updated">
+                    <p><em>Last updated: June 2025</em></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
