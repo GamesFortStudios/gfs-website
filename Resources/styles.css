@@ -544,10 +544,12 @@ body {
         font-size: 1rem;
     }
 
-    /* FIXED BULLET ALIGNMENT FOR MOBILE */
+    /* FIXED BULLET ALIGNMENT FOR MOBILE - MATCH DESKTOP */
     .features-list,
     .services-list {
-        padding: 0 0.5rem;
+        padding: 0 1rem;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .features-list li,
@@ -555,20 +557,25 @@ body {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 0.75rem;
-        padding: 0.75rem;
+        gap: 1rem;
+        padding: 0.75rem 0.5rem;
         margin-bottom: 1rem;
+        margin-left: 0;
+        margin-right: 0;
         text-align: left;
+        padding-left: 0.5rem;
     }
 
     .features-list li::before,
     .services-list li::before {
-        min-width: 35px;
-        width: 35px;
-        height: 35px;
+        min-width: 40px;
+        width: 40px;
+        height: 40px;
         font-size: 1rem;
         flex-shrink: 0;
         margin: 0;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .features-list li span,
@@ -576,6 +583,7 @@ body {
         flex: 1;
         font-size: 0.95rem;
         line-height: 1.5;
+        padding-left: 0;
     }
 
     .team-section h2 {
@@ -607,16 +615,18 @@ body {
 
     .features-list li,
     .services-list li {
-        gap: 0.6rem;
-        padding: 0.6rem;
+        gap: 1rem;
+        padding: 0.6rem 0.5rem;
+        padding-left: 0.5rem;
     }
 
     .features-list li::before,
     .services-list li::before {
-        min-width: 32px;
-        width: 32px;
-        height: 32px;
+        min-width: 35px;
+        width: 35px;
+        height: 35px;
         font-size: 0.9rem;
+        margin-left: 0;
     }
 
     .features-list li span,
