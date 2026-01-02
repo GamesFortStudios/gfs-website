@@ -151,3 +151,22 @@ body {
     margin-bottom: 1rem;
     opacity: 0.9;
 }
+
+/* Logo Responsive Sizing */
+.logo img {
+    height: 70px !important;
+    width: auto !important;
+    max-height: 70px !important;
+    max-width: 200px !important;
+    object-fit: contain !important;
+    transition: height 0.3s ease;
+}
+
+/* Mobile responsive - logo 50px */
+@media (max-width: 768px) {
+    .logo img {
+        height: 50px !important;
+        max-height: 50px !important;
+        max-width: 150px !important;
+    }
+}
