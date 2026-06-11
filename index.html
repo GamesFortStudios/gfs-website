@@ -1,577 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games Fort Studios - Expert Game Development Company</title>
-    <meta name="description" content="Leading game development studio specializing in educational games, casino games, Rummy games, and more. Expert Unity game developers delivering top-quality experiences.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ SEO (per audit) ============ -->
+<title>Games Fort Studios | Game Development Studio & Unity Experts for Hire</title>
+<meta name="description" content="Game development studio with 100+ published games and 3M+ downloads. Hire expert Unity & Unreal developers for mobile games, AR/VR, multiplayer, LiveOps and apps.">
+<link rel="canonical" href="https://gamesfortstudio.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Games Fort Studios | Game Development Studio & Unity Experts for Hire">
+<meta property="og:description" content="100+ published games, 3M+ downloads, 8+ years. Full-cycle game & app development: Unity, Unreal, mobile, AR/VR, multiplayer & LiveOps.">
+<meta property="og:url" content="https://gamesfortstudio.com/">
+<meta property="og:image" content="https://gamesfortstudio.com/assets/Images/CompanyLogo_Black.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Games Fort Studios",
+  "url": "https://gamesfortstudio.com/",
+  "logo": "https://gamesfortstudio.com/assets/Images/CompanyLogo_Black.png",
+  "email": "info@gamesfortstudio.com",
+  "description": "Game development studio specializing in Unity and Unreal development for mobile, PC, AR/VR, multiplayer and educational games.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plot No 57, Ground Floor, Nagarjuna Hills, Punjagutta",
+    "addressLocality": "Hyderabad",
+    "postalCode": "500082",
+    "addressCountry": "IN"
+  },
+  "sameAs": [
+    "https://www.instagram.com/gamesfortstudiosofficial/",
+    "https://in.linkedin.com/company/games-fort-studios",
+    "https://play.google.com/store/apps/developer?id=Games+Fort+Studios"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* ================= TOKENS ================= */
+:root{
+  --bg:#0D1022;          /* midnight indigo */
+  --surface:#151935;     /* raised panel */
+  --surface-2:#1C2147;   /* hover panel  */
+  --line:#2A2F5A;        /* hairline     */
+  --ink:#F0EFFA;         /* primary text */
+  --muted:#9CA0C0;       /* secondary    */
+  --gold:#F5B82E;        /* trophy gold  */
+  --gold-deep:#D99A0B;
+  --violet:#6E5BFF;      /* engine violet*/
+  --radius:14px;
+  --disp:'Unbounded',sans-serif;
+  --body:'Instrument Sans',system-ui,sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;
+  background-image:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(110,91,255,.14),transparent),
+  repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,.015) 40px);}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+
+/* HUD eyebrow — signature device */
+.quest{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.quest::before{content:"▸";color:var(--violet)}
+h2{font-family:var(--disp);font-weight:700;font-size:clamp(26px,3.4vw,40px);line-height:1.18;margin-bottom:14px;letter-spacing:-.01em}
+.lede{color:var(--muted);max-width:620px;margin-bottom:48px}
+
+/* HUD corner frame */
+.hud{position:relative}
+.hud::before,.hud::after{content:"";position:absolute;width:22px;height:22px;border:2px solid var(--gold);opacity:.85}
+.hud::before{top:-2px;left:-2px;border-right:0;border-bottom:0}
+.hud::after{bottom:-2px;right:-2px;border-left:0;border-top:0}
+
+/* ================= NAV ================= */
+header{position:sticky;top:0;z-index:50;background:rgba(13,16,34,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{font-family:var(--disp);font-weight:900;font-size:17px;letter-spacing:.02em;display:flex;align-items:center;gap:11px}
+.logo .cube{width:26px;height:26px;background:linear-gradient(135deg,var(--gold),var(--gold-deep));border-radius:6px;display:grid;place-items:center;color:#0D1022;font-size:13px;font-family:var(--mono);font-weight:600}
+.logo span b{color:var(--gold)}
+.nav ul{display:flex;gap:30px;list-style:none}
+.nav ul a{font-size:15px;color:var(--muted);font-weight:500;transition:color .2s}
+.nav ul a:hover{color:var(--ink)}
+.btn{display:inline-block;font-weight:600;font-size:15px;padding:13px 26px;border-radius:10px;transition:transform .15s,box-shadow .15s;border:0;cursor:pointer;font-family:var(--body)}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#151000;box-shadow:0 6px 24px rgba(245,184,46,.25)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(245,184,46,.38)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:8px 12px;font-family:var(--mono);cursor:pointer}
+
+/* ================= HERO ================= */
+.hero{padding:110px 0 90px;display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+.hero h1{font-family:var(--disp);font-weight:900;font-size:clamp(30px,4.6vw,54px);line-height:1.12;letter-spacing:-.015em;margin:0 0 22px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{color:var(--muted);font-size:18.5px;max-width:540px;margin-bottom:34px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+
+/* XP bar — signature */
+.xp{margin-top:46px;max-width:480px}
+.xp .lbl{display:flex;justify-content:space-between;font-family:var(--mono);font-size:12.5px;color:var(--muted);margin-bottom:8px}
+.xp .lbl b{color:var(--gold)}
+.xp .bar{height:10px;background:var(--surface);border:1px solid var(--line);border-radius:99px;overflow:hidden}
+.xp .fill{height:100%;width:0;background:linear-gradient(90deg,var(--violet),var(--gold));border-radius:99px;transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
+
+/* HUD stats panel */
+.statpanel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:30px 24px}
+.stat .num{font-family:var(--disp);font-weight:700;font-size:34px;color:var(--gold);line-height:1}
+.stat .cap{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:8px}
+
+/* ================= SERVICES ================= */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;transition:transform .2s,border-color .2s,background .2s}
+.card:hover{transform:translateY(-4px);border-color:var(--gold);background:var(--surface-2)}
+.card .ico{font-size:24px;margin-bottom:16px;width:48px;height:48px;border-radius:11px;background:rgba(110,91,255,.16);display:grid;place-items:center}
+.card h3{font-family:var(--disp);font-weight:500;font-size:17px;margin-bottom:10px}
+.card p{color:var(--muted);font-size:15px}
+
+/* ================= GAMES ================= */
+.games-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.game{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .2s,border-color .2s}
+.game:hover{transform:translateY(-4px);border-color:var(--violet)}
+.game .shot{aspect-ratio:16/10;overflow:hidden;background:var(--surface-2)}
+.game .shot img{width:100%;height:100%;object-fit:cover}
+.game .body{padding:22px 22px 24px}
+.game h3{font-family:var(--disp);font-weight:500;font-size:15.5px;margin-bottom:8px}
+.game p{color:var(--muted);font-size:14.5px;margin-bottom:16px}
+.game .meta{display:flex;gap:10px;font-family:var(--mono);font-size:12px}
+.game .meta span{background:rgba(245,184,46,.12);color:var(--gold);padding:4px 10px;border-radius:6px}
+.center-cta{text-align:center;margin-top:44px}
+
+/* ================= SHOWCASE ================= */
+.show-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.show{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.show video{width:100%;aspect-ratio:16/9;object-fit:cover;background:#000}
+.show .body{padding:22px 24px}
+.show h3{font-family:var(--disp);font-weight:500;font-size:16px;margin-bottom:8px}
+.show p{color:var(--muted);font-size:15px}
+
+/* ================= EDU / TEMPLATES ================= */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.ticklist{list-style:none;margin-top:22px}
+.ticklist li{padding:9px 0 9px 32px;position:relative;color:var(--muted)}
+.ticklist li::before{content:"✦";position:absolute;left:4px;color:var(--gold)}
+.minicards{display:grid;gap:14px}
+.mini{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.mini h4{font-family:var(--disp);font-weight:500;font-size:15px;margin-bottom:6px}
+.mini p{color:var(--muted);font-size:14.5px}
+
+/* ================= CONTACT ================= */
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px}
+.cinfo .row{display:flex;gap:16px;margin-bottom:26px}
+.cinfo .ic{width:44px;height:44px;border-radius:10px;background:rgba(245,184,46,.13);display:grid;place-items:center;font-size:18px;flex-shrink:0}
+.cinfo h4{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.cinfo p,.cinfo a{font-size:15.5px}
+.cinfo a:hover{color:var(--gold)}
+form{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:32px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin:0 0 7px}
+input,select,textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:13px 15px;color:var(--ink);font-family:var(--body);font-size:15px;margin-bottom:18px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+textarea{min-height:120px;resize:vertical}
+
+/* ================= FOOTER ================= */
+footer{border-top:1px solid var(--line);padding:60px 0 36px;background:rgba(0,0,0,.22)}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
+.fgrid h4{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.fgrid ul{list-style:none}
+.fgrid li{margin-bottom:10px}
+.fgrid a{color:var(--muted);font-size:14.5px}
+.fgrid a:hover{color:var(--gold)}
+.fgrid .about p{color:var(--muted);font-size:14.5px;max-width:300px;margin-top:14px}
+.copy{font-family:var(--mono);font-size:12.5px;color:var(--muted);text-align:center;border-top:1px solid var(--line);padding-top:28px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .xp .fill{transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:960px){
+  .hero{grid-template-columns:1fr;padding-top:70px;gap:48px}
+  .grid3,.games-grid{grid-template-columns:1fr 1fr}
+  .show-grid,.split,.contact-grid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  section{padding:68px 0}
+  .grid3,.games-grid,.frow{grid-template-columns:1fr}
+  .nav ul{display:none;position:absolute;top:72px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;padding:20px 24px;gap:18px}
+  .nav ul.open{display:flex}
+  .menu-btn{display:block}
+  .nav .btn{display:none}
+  .statpanel{grid-template-columns:1fr 1fr;padding:26px}
+}
+</style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-           <div class="logo">
-    <img src="assets/Images/CompanyLogo_Black.png" alt="Games Fort Studios Logo" style="height: 50px;">
-    
-</div>
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#games">Games</a></li>
-                <li><a href="#showcase">Showcase</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#contact" class="nav-cta">Get Started</a></li>
-            </ul>
-            <button class="mobile-toggle" id="mobileToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
+<header>
+  <nav class="nav wrap" aria-label="Main">
+    <a class="logo" href="#home" aria-label="Games Fort Studios — home">
+      <span class="cube">GF</span><span>GAMES <b>FORT</b></span>
+    </a>
+    <ul id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#games">Our Games</a></li>
+      <li><a href="#showcase">Showcase</a></li>
+      <li><a href="#educational">Educational</a></li>
+      <li><a href="#templates">Unity Templates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-gold" href="#contact">Start a Project</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">MENU</button>
+  </nav>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="floating-shapes">
-            <div class="shape"><i class="fas fa-gamepad"></i></div>
-            <div class="shape"><i class="fas fa-trophy"></i></div>
-            <div class="shape"><i class="fas fa-rocket"></i></div>
-        </div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Your Vision, <span class="highlight">Our Creation</span></h1>
-                <p>Welcome to Games Fort Studios, your trusted partner in game development. We specialize in creating immersive, engaging, and innovative games for Android, iOS, and web platforms.</p>
-                <div class="button-group">
-                    <a href="#services" class="primary-button">
-                        <i class="fas fa-play"></i> Explore Services
-                    </a>
-                    <a href="#games" class="secondary-button">
-                        <i class="fas fa-gamepad"></i> View Games
-                    </a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-card">
-                    <h3>Expert Game Development</h3>
-                    <div class="dashboard-preview">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="stats-grid">
-                        <div class="stat">
-                            <h3 data-target="100">100+</h3>
-                            <p>Published Games</p>
-                        </div>
-                        <div class="stat">
-                            <h3 data-target="3">3M+</h3>
-                            <p>Total Downloads</p>
-                        </div>
-                        <div class="stat">
-                            <h3 data-target="8">8+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat">
-                            <h3 data-target="99">99%</h3>
-                            <p>Client Satisfaction</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<main id="home">
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About Games Fort Studios</h2>
-                    <p>At Games Fort Studios, we are passionate about creating unforgettable gaming experiences. From casual mobile games to sophisticated multiplayer casino platforms, immersive AR/VR experiences, and educational content, our skilled developers leverage the power of Unity, Unreal, and custom engines to deliver games that engage and entertain.</p>
-                    <p>With over 100 published games and 3 million+ downloads, we continue to innovate in the mobile, PC, and emerging technology gaming space. Our commitment to innovation, quality, and client satisfaction ensures every project we create stands out in the competitive gaming market.</p>
-                    <ul class="about-features">
-                        <li><i class="fas fa-check"></i> Expert Unity and Unreal Game Developers</li>
-                        <li><i class="fas fa-check"></i> AR/VR Development Specialists</li>
-                        <li><i class="fas fa-check"></i> Cross-Platform Development</li>
-                        <li><i class="fas fa-check"></i> App Development and ASO</li>
-                        <li><i class="fas fa-check"></i> Multiplayer and LiveOps Integration</li>
-                        <li><i class="fas fa-check"></i> Quality Assurance and Testing</li>
-                        <li><i class="fas fa-check"></i> Post-Launch Support</li>
-                    </ul>
-                </div>
-                <div class="about-visual">
-                    <i class="fas fa-users"></i>
-                    <h3>Passionate Team</h3>
-                    <p>Our team of passionate creators is on a mission to deliver unparalleled gaming experiences to players worldwide. We believe in the power of storytelling, the magic of graphics, and the thrill of gameplay.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Game Development Services</h2>
-                <p>Comprehensive gaming solutions for every platform and genre</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <h3>Mobile Game Development</h3>
-                    <p>Expert development of engaging mobile games for Android and iOS platforms using Unity and cutting-edge technologies.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-vr-cardboard"></i>
-                    </div>
-                    <h3>AR and VR Development</h3>
-                    <p>Step into the future with our cutting-edge AR and VR solutions for education, entertainment, real estate, and immersive 3D environments.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Educational Games</h3>
-                    <p>Creating interactive and engaging educational games that make learning fun and effective for students of all ages.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-dice"></i>
-                    </div>
-                    <h3>Casino Games</h3>
-                    <p>Sophisticated casino and gambling games with stunning graphics, smooth gameplay, and secure payment integration.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fas fa-gamepad"></i>
-                    </div>
-                    <h3>Rummy Games</h3>
-                    <p>Feature-rich Rummy games with multiplayer functionality, tournaments, and engaging user interfaces.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Multiplayer and LiveOps</h3>
-                    <p>Advanced multiplayer development with LiveOps and performance optimization to ensure long-term player engagement and monetization success.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>App Development and ASO</h3>
-                    <p>Complete app development services with App Store Optimization to maximize your app's visibility and downloads.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3>Gamification</h3>
-                    <p>Transform business processes with gamification elements that increase engagement and user retention.</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <h3>Animation and Graphics</h3>
-                    <p>Stunning 2D and 3D animations, character design, and visual effects for immersive gaming experiences.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Games Section -->
-    <section class="games" id="games">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Published Games</h2>
-                <p>Discover our amazing portfolio of successful mobile games</p>
-            </div>
-            <div class="games-grid">
-                <div class="game-card fade-in">
-                   <div class="game-image">
-    <img src="Resources/images/aaa.png" alt="">
-</div>
-
-                    <div class="game-info">
-                        <h3>Little League Legends</h3>
-                        <p>A fun multiplayer online mobile game with challenges for players to overcome various obstacles and win by finishing the race or getting the ultimate knockout.</p>
-                        <div class="game-stats">
-                            <div class="game-stat">
-                                <i class="fas fa-download"></i>
-                                <span>50K+ Downloads</span>
-                            </div>
-                            <div class="game-stat">
-                                <i class="fas fa-star"></i>
-                                <span>4.2 Rating</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="game-card fade-in">
-                    <div class="game-image">
-                         <img src="Resources/images/skullshooting.png" alt="">
-                    </div>
-                    <div class="game-info">
-                        <h3>Skull Shooting Dungeon World</h3>
-                        <p>An action-packed FPS game featuring encounters between the hero and mythical evil creatures with HD graphics and realistic weapons.</p>
-                        <div class="game-stats">
-                            <div class="game-stat">
-                                <i class="fas fa-download"></i>
-                                <span>100K+ Downloads</span>
-                            </div>
-                            <div class="game-stat">
-                                <i class="fas fa-star"></i>
-                                <span>4.5 Rating</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="game-card fade-in">
-                    <div class="game-image">
-                         <img src="Resources/images/ball balancing.png" alt="">
-                    </div>
-                    <div class="game-info">
-                        <h3>Extreme Balancer 3D</h3>
-                        <p>Challenge your balancing skills in this exciting 3D ball running game with various obstacles and thrilling levels.</p>
-                        <div class="game-stats">
-                            <div class="game-stat">
-                                <i class="fas fa-download"></i>
-                                <span>75K+ Downloads</span>
-                            </div>
-                            <div class="game-stat">
-                                <i class="fas fa-star"></i>
-                                <span>3.8 Rating</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="game-card fade-in">
-                    <div class="game-image">
-                         <img src="Resources/images/1222.png" alt="">
-                    </div>
-                    <div class="game-info">
-                        <h3>Draw To Crush: Logic Puzzle</h3>
-                        <p>Use your creativity and logic to solve challenging puzzles by drawing lines and shapes in this innovative puzzle game.</p>
-                        <div class="game-stats">
-                            <div class="game-stat">
-                                <i class="fas fa-download"></i>
-                                <span>60K+ Downloads</span>
-                            </div>
-                            <div class="game-stat">
-                                <i class="fas fa-star"></i>
-                                <span>4.1 Rating</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="game-card fade-in">
-                    <div class="game-image">
-                         <img src="Resources/images/4545.png" alt="">
-                    </div>
-                    <div class="game-info">
-                        <h3>Splash Run 3D</h3>
-                        <p>Experience the thrill of racing through colorful water slides in this fun and exciting 3D running game.</p>
-                        <div class="game-stats">
-                            <div class="game-stat">
-                                <i class="fas fa-download"></i>
-                                <span>40K+ Downloads</span>
-                            </div>
-                            <div class="game-stat">
-                                <i class="fas fa-star"></i>
-                                <span>4.0 Rating</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="game-card fade-in">
-                    <div class="game-image">
-                         <img src="Resources/images/Screenshot 2025-07-19 152428.png" alt="">
-                    </div>
-                    <div class="game-info">
-                        <h3>Draw to Save: Animal Rescue</h3>
-                        <p>Use your drawing skills to save adorable animals in this heartwarming puzzle game with charming 3D graphics.</p>
-                        <div class="game-stats">
-                            <div class="game-stat">
-                                <i class="fas fa-download"></i>
-                                <span>35K+ Downloads</span>
-                            </div>
-                            <div class="game-stat">
-                                <i class="fas fa-star"></i>
-                                <span>4.3 Rating</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-   <!-- Video Showcase Section -->
-<!-- Video Showcase Section -->
-<section class="video-showcase" id="showcase">
-    <div class="container">
-        <div class="section-header">
-            <h2>Our Development Showcase</h2>
-            <p>Watch our latest game development projects and immersive AR/VR experiences in action</p>
-        </div>
-
-        <!-- Row 1 -->
-        <div class="video-row">
-            <div class="video-description">
-                <h3>Games Fort Studios Services</h3>
-                <p>Explore our wide range of development services including AR, VR, and full game production tailored for interactive experiences.</p>
-            </div>
-            <div class="video-box">
-                <video controls poster="Resources/images/services.png">
-    <source src="Resources/videos/Gfs_VrServices.webm" type="video/webm">
-    Your browser does not support the video tag.
-</video>
-
-            </div>
-        </div>
-
-        <!-- Row 2 -->
-        <div class="video-row">
-            <div class="video-description">
-                <h3>Gamification</h3>
-                <p>Discover how we gamify education, business processes, and more to create motivation and engagement through play.</p>
-            </div>
-            <div class="video-box">
-                 <video controls poster="Resources/images/gamificartion.png">
-    <source src="Resources/videos/WV_Gamification.webm" type="video/webm">
-    Your browser does not support the video tag.
-</video>
-            </div>
-        </div>
+<!-- ================= HERO ================= -->
+<div class="wrap hero">
+  <div>
+    <p class="quest">Player 2 ready // Your dev partner</p>
+    <h1>Expert Game Development Studio — <em>Unity, Unreal &amp; Mobile</em> Games for Hire</h1>
+    <p>Games Fort Studios builds games end-to-end for clients worldwide: mobile, PC, AR/VR, multiplayer and educational. 100+ shipped titles, 3M+ downloads — your project is in veteran hands.</p>
+    <div class="ctas">
+      <a class="btn btn-gold" href="#contact">Get a Free Consultation</a>
+      <a class="btn btn-ghost" href="#games">See Our Games</a>
     </div>
+    <div class="xp" aria-hidden="true">
+      <div class="lbl"><span>STUDIO LEVEL</span><b>LVL 8 — 8+ YEARS IN PRODUCTION</b></div>
+      <div class="bar"><div class="fill" id="xpfill"></div></div>
+    </div>
+  </div>
+
+  <div class="statpanel hud" role="list" aria-label="Studio statistics">
+    <div class="stat" role="listitem"><div class="num" data-count="100">0</div><div class="cap">Published Games</div></div>
+    <div class="stat" role="listitem"><div class="num" data-count="3" data-suffix="M+">0</div><div class="cap">Total Downloads</div></div>
+    <div class="stat" role="listitem"><div class="num" data-count="8">0</div><div class="cap">Years Experience</div></div>
+    <div class="stat" role="listitem"><div class="num" data-count="99" data-suffix="%">0</div><div class="cap">Client Satisfaction</div></div>
+  </div>
+</div>
+
+<!-- ================= SERVICES ================= -->
+<section id="services">
+  <div class="wrap">
+    <p class="quest">Quest log // What we build</p>
+    <h2>Game Development Services for Every Platform</h2>
+    <p class="lede">Full-cycle production from prototype to LiveOps — for studios, brands, schools and startups that need a proven game development company.</p>
+    <div class="grid3">
+      <div class="card rv"><div class="ico">📱</div><h3>Mobile Game Development</h3><p>Engaging Android &amp; iOS games built in Unity with modern monetization and analytics from day one.</p></div>
+      <div class="card rv"><div class="ico">🥽</div><h3>AR &amp; VR Development</h3><p>Immersive AR/VR for education, entertainment and real estate — from concept to headset-ready builds.</p></div>
+      <div class="card rv"><div class="ico">🎓</div><h3>Educational Games</h3><p>Interactive learning games that make alphabets, numbers and problem-solving genuinely fun for kids.</p></div>
+      <div class="card rv"><div class="ico">🃏</div><h3>Casino &amp; Card Games</h3><p>Sophisticated casino and Rummy platforms with multiplayer tournaments and secure payment integration.</p></div>
+      <div class="card rv"><div class="ico">🌐</div><h3>Multiplayer &amp; LiveOps</h3><p>Real-time multiplayer architecture plus LiveOps tooling that keeps players engaged and revenue growing.</p></div>
+      <div class="card rv"><div class="ico">🚀</div><h3>App Development &amp; ASO</h3><p>Complete app builds with App Store Optimization to maximize visibility, downloads and retention.</p></div>
+      <div class="card rv"><div class="ico">🏆</div><h3>Gamification</h3><p>Game mechanics applied to business, training and education that measurably lift engagement.</p></div>
+      <div class="card rv"><div class="ico">🎨</div><h3>Animation &amp; Graphics</h3><p>2D/3D art, character design and VFX that give your game a look players remember.</p></div>
+      <div class="card rv"><div class="ico">🛠️</div><h3>Co-Development &amp; Outsourcing</h3><p>Plug our senior Unity and Unreal developers into your pipeline to ship faster without hiring overhead.</p></div>
+    </div>
+  </div>
 </section>
 
+<!-- ================= GAMES ================= -->
+<section id="games">
+  <div class="wrap">
+    <p class="quest">Trophy room // Shipped titles</p>
+    <h2>Our Published Games</h2>
+    <p class="lede">A selection from 100+ titles we've taken from idea to app store. Every download number below is a player we earned for a project like yours.</p>
+    <div class="games-grid">
+      <article class="game rv"><div class="shot"><img src="https://gamesfortstudio.com/Resources/images/aaa.png" alt="Little League Legends multiplayer mobile game by Games Fort Studios" loading="lazy"></div><div class="body"><h3>Little League Legends</h3><p>Multiplayer obstacle racing — outrun rivals or win by ultimate knockout.</p><div class="meta"><span>⬇ 50K+</span><span>★ 4.2</span></div></div></article>
+      <article class="game rv"><div class="shot"><img src="https://gamesfortstudio.com/Resources/images/skullshooting.png" alt="Skull Shooting Dungeon World FPS game with HD graphics" loading="lazy"></div><div class="body"><h3>Skull Shooting Dungeon World</h3><p>Action-packed FPS against mythical creatures with HD graphics and realistic weapons.</p><div class="meta"><span>⬇ 100K+</span><span>★ 4.5</span></div></div></article>
+      <article class="game rv"><div class="shot"><img src="https://gamesfortstudio.com/Resources/images/ball%20balancing.png" alt="Extreme Balancer 3D ball running game" loading="lazy"></div><div class="body"><h3>Extreme Balancer 3D</h3><p>3D ball-balancing runner packed with obstacles and thrilling levels.</p><div class="meta"><span>⬇ 75K+</span><span>★ 3.8</span></div></div></article>
+      <article class="game rv"><div class="shot"><img src="https://gamesfortstudio.com/Resources/images/1222.png" alt="Draw To Crush logic puzzle mobile game" loading="lazy"></div><div class="body"><h3>Draw To Crush: Logic Puzzle</h3><p>Draw lines and shapes to solve inventive physics puzzles.</p><div class="meta"><span>⬇ 60K+</span><span>★ 4.1</span></div></div></article>
+      <article class="game rv"><div class="shot"><img src="https://gamesfortstudio.com/Resources/images/4545.png" alt="Splash Run 3D water slide racing game" loading="lazy"></div><div class="body"><h3>Splash Run 3D</h3><p>Race through colorful water slides in this fast, joyful 3D runner.</p><div class="meta"><span>⬇ 40K+</span><span>★ 4.0</span></div></div></article>
+      <article class="game rv"><div class="shot"><img src="https://gamesfortstudio.com/Resources/images/Screenshot%202025-07-19%20152428.png" alt="Draw to Save Animal Rescue puzzle game with 3D graphics" loading="lazy"></div><div class="body"><h3>Draw to Save: Animal Rescue</h3><p>Use drawing skills to rescue adorable animals across charming 3D levels.</p><div class="meta"><span>⬇ 35K+</span><span>★ 4.3</span></div></div></article>
+    </div>
+    <div class="center-cta">
+      <a class="btn btn-ghost" href="https://play.google.com/store/apps/developer?id=Games+Fort+Studios" target="_blank" rel="noopener">View All on Google Play ↗</a>
+    </div>
+  </div>
+</section>
 
-    <!-- Educational Content Section -->
-    <section class="educational-content" id="educational">
-        <div class="container">
-            <div class="educational-content-wrapper">
-                <div class="educational-text">
-                    <h2>Educational Gaming Solutions</h2>
-                    <p>We create engaging animated videos and interactive games that make learning fun for kids! Through colorful 3D adventures, catchy rhymes, and playful characters, children explore alphabets, colors, numbers, and more.</p>
-                    <div class="educational-features">
-                        <div class="feature-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <div>
-                                <h4>E-Learning Platforms</h4>
-                                <p>Custom educational content for online learning platforms and schools</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-child"></i>
-                            <div>
-                                <h4>Early Education</h4>
-                                <p>Interactive content that sparks curiosity and supports joyful learning for children</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-brain"></i>
-                            <div>
-                                <h4>Cognitive Development</h4>
-                                <p>Games designed to enhance problem-solving and critical thinking skills</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="educational-visual">
-                    <div class="character-showcase">
-                        <i class="fas fa-robot"></i>
-                        <h3>Meet Our Characters</h3>
-                        <p>Playful characters that guide children through exciting learning adventures, making education an engaging and memorable experience.</p>
-                        <a href="#contact" class="cta-button">
-                            <i class="fas fa-rocket"></i> Create Educational Content
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ================= SHOWCASE ================= -->
+<section id="showcase">
+  <div class="wrap">
+    <p class="quest">Replay // Watch us work</p>
+    <h2>Development Showcase</h2>
+    <p class="lede">Our latest game production and immersive AR/VR work, in motion.</p>
+    <div class="show-grid">
+      <div class="show rv">
+        <video controls preload="metadata" aria-label="Games Fort Studios AR, VR and game production services showreel"><source src="Resources/videos/Gfs_VrServices.webm" type="video/webm"></video>
+        <div class="body"><h3>Full-Cycle Game &amp; AR/VR Production</h3><p>From concept art to engine — our range of development services for interactive experiences.</p></div>
+      </div>
+      <div class="show rv">
+        <video controls preload="metadata" aria-label="Gamification showreel by Games Fort Studios"><source src="Resources/videos/WV_Gamification.webm" type="video/webm"></video>
+        <div class="body"><h3>Gamification in Action</h3><p>How we turn education and business processes into play that motivates and retains.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Projects Portfolio Section -->
-    <section class="projects-portfolio" id="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2>Unity Game Projects</h2>
-                <p>Buy fully functional Unity game projects built by professionals. Perfect for learning, re-skinning, or launching your own game.</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card fade-in">
-                    <div class="project-image">
-                        <i class="fas fa-cube"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>Complete Unity Templates</h3>
-                        <p>Ready-to-use Unity game templates with commercial usage rights, clear documentation, and professional code structure.</p>
-                        <div class="project-features">
-                            <span class="feature-tag">Unity 2023</span>
-                            <span class="feature-tag">Source Code</span>
-                            <span class="feature-tag">Commercial Rights</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card fade-in">
-                    <div class="project-image">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>Custom Game Development</h3>
-                        <p>Full-cycle game development from prototyping to publishing across all genres and platforms.</p>
-                        <div class="project-features">
-                            <span class="feature-tag">Cross-Platform</span>
-                            <span class="feature-tag">Multiplayer</span>
-                            <span class="feature-tag">LiveOps</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card fade-in">
-                    <div class="project-image">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <div class="project-info">
-                        <h3>Consultation Services</h3>
-                        <p>Get free consultation for your design and development ideas. Our team is excited to convert your vision into reality.</p>
-                        <div class="project-features">
-                            <span class="feature-tag">Free Consult</span>
-                            <span class="feature-tag">Expert Advice</span>
-                            <span class="feature-tag">Custom Solutions</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ================= EDUCATIONAL ================= -->
+<section id="educational">
+  <div class="wrap split">
+    <div>
+      <p class="quest">Side quest // Learning through play</p>
+      <h2>Educational Gaming Solutions</h2>
+      <p style="color:var(--muted)">Colorful 3D adventures, catchy rhymes and playful characters that help children explore alphabets, colors, numbers and more — built for schools, e-learning platforms and parents.</p>
+      <ul class="ticklist">
+        <li>Custom content for e-learning platforms and schools</li>
+        <li>Early education that sparks curiosity and joyful learning</li>
+        <li>Games designed to build problem-solving and critical thinking</li>
+      </ul>
+      <p style="margin-top:28px"><a class="btn btn-gold" href="#contact">Create Educational Content</a></p>
+    </div>
+    <div class="minicards">
+      <div class="mini rv"><h4>📚 E-Learning Platforms</h4><p>Curriculum-aligned interactive content delivered for web and mobile.</p></div>
+      <div class="mini rv"><h4>🧸 Early Education</h4><p>Friendly characters guide kids through exciting learning adventures.</p></div>
+      <div class="mini rv"><h4>🧠 Cognitive Development</h4><p>Puzzles and challenges that grow reasoning skills while kids play.</p></div>
+    </div>
+  </div>
+</section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Get In Touch</h2>
-                <p>Ready to bring your gaming vision to life? Let's discuss your project!</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h2>Contact Information</h2>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Address</h4>
-                            <p>Plot No 57, Ground Floor<br>Nagarjuna Hills, Punjagutta<br>Hyderabad - 500082, India</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>info@gamesfortstudio.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-globe"></i>
-                        <div>
-                            <h4>Website</h4>
-                            <p>www.gamesfortstudio.com</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h2>Send Us a Message</h2>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <select required>
-                                <option value="">Select Service</option>
-                                <option value="mobile-games">Mobile Game Development</option>
-                                <option value="ar-vr">AR and VR Development</option>
-                                <option value="educational-games">Educational Games</option>
-                                <option value="casino-games">Casino Games</option>
-                                <option value="rummy-games">Rummy Games</option>
-                                <option value="multiplayer">Multiplayer and LiveOps</option>
-                                <option value="app-development">App Development and ASO</option>
-                                <option value="gamification">Gamification</option>
-                                <option value="animation">Animation and Graphics</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ================= TEMPLATES ================= -->
+<section id="templates">
+  <div class="wrap">
+    <p class="quest">Inventory // Ready-made &amp; custom</p>
+    <h2>Unity Game Projects &amp; Templates</h2>
+    <p class="lede">Launch faster with professional, fully documented Unity projects — or have us build yours from scratch.</p>
+    <div class="grid3">
+      <div class="card rv"><div class="ico">📦</div><h3>Complete Unity Templates</h3><p>Ready-to-ship game templates with commercial rights, clean code and clear documentation. Perfect for re-skinning or learning.</p></div>
+      <div class="card rv"><div class="ico">⚙️</div><h3>Custom Game Development</h3><p>Full-cycle development from prototype to publishing — cross-platform, multiplayer and LiveOps included.</p></div>
+      <div class="card rv"><div class="ico">💬</div><h3>Free Consultation</h3><p>Bring us your idea. We'll map the scope, timeline and budget — free, no strings attached.</p></div>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Games Fort Studios</h4>
-                <p>Your trusted partner in game development. We specialize in creating immersive, engaging, and innovative games for Android, iOS, and web platforms.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/gamesfortstudiosofficial/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://in.linkedin.com/company/games-fort-studios" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="#services">Mobile Game Development</a></li>
-                    <li><a href="#services">AR and VR Development</a></li>
-                    <li><a href="#services">Educational Games</a></li>
-                    <li><a href="#services">Casino Games</a></li>
-                    <li><a href="#services">Rummy Games</a></li>
-                    <li><a href="#services">Gamification</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#games">Our Games</a></li>
-                    <li><a href="#showcase">Showcase</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Our Games</h4>
-                <ul>
-                    <li><a href="https://play.google.com/store/apps/developer?id=Games+Fort+Studios">Google Play Store</a></li>
-                    <li><a href="#">Little League Legends</a></li>
-                    <li><a href="#">Extreme Balancer 3D</a></li>
-                    <li><a href="#">Draw To Crush</a></li>
-                    <li><a href="#">Splash Run 3D</a></li>
-                </ul>
-            </div>
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="wrap">
+    <p class="quest">New game // Start your project</p>
+    <h2>Let's Build Your Game</h2>
+    <p class="lede">Tell us what you're imagining — we usually reply within one business day.</p>
+    <div class="contact-grid">
+      <div class="cinfo">
+        <div class="row"><div class="ic">📍</div><div><h4>Studio</h4><p>Plot No 57, Ground Floor, Nagarjuna Hills, Punjagutta, Hyderabad — 500082, India</p></div></div>
+        <div class="row"><div class="ic">✉️</div><div><h4>Email</h4><a href="mailto:info@gamesfortstudio.com">info@gamesfortstudio.com</a></div></div>
+        <div class="row"><div class="ic">🔗</div><div><h4>Find us</h4><p><a href="https://in.linkedin.com/company/games-fort-studios" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://www.instagram.com/gamesfortstudiosofficial/" target="_blank" rel="noopener">Instagram</a> · <a href="https://play.google.com/store/apps/developer?id=Games+Fort+Studios" target="_blank" rel="noopener">Google Play</a></p></div></div>
+      </div>
+      <form action="https://formsubmit.co/info@gamesfortstudio.com" method="POST">
+        <input type="hidden" name="_subject" value="New project inquiry — gamesfortstudio.com">
+        <input type="hidden" name="_captcha" value="false">
+        <div class="frow">
+          <div><label for="fn">Name</label><input id="fn" name="name" required autocomplete="name"></div>
+          <div><label for="fe">Email</label><input id="fe" name="email" type="email" required autocomplete="email"></div>
         </div>
-        <div class="footer-bottom">
-            <p>2025 Games Fort Studios. All rights reserved.</p>
-        </div>
-    </footer>
+        <label for="fs">Service</label>
+        <select id="fs" name="service">
+          <option>Mobile Game Development</option><option>AR and VR Development</option>
+          <option>Educational Games</option><option>Casino Games</option><option>Rummy Games</option>
+          <option>Multiplayer and LiveOps</option><option>App Development and ASO</option>
+          <option>Gamification</option><option>Animation and Graphics</option><option>Unity Templates</option>
+        </select>
+        <label for="fm">Tell us about your project</label>
+        <textarea id="fm" name="message" required placeholder="Platforms, genre, timeline, budget range — anything you know so far."></textarea>
+        <button class="btn btn-gold" type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
 
-    <script src="assets/js/script.js"></script>
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="about">
+        <a class="logo" href="#home"><span class="cube">GF</span><span>GAMES <b>FORT</b></span></a>
+        <p>A game development studio in Hyderabad shipping immersive games and apps for Android, iOS, PC and AR/VR since 2018.</p>
+      </div>
+      <div><h4>Services</h4><ul>
+        <li><a href="#services">Mobile Game Development</a></li>
+        <li><a href="#services">AR &amp; VR Development</a></li>
+        <li><a href="#services">Educational Games</a></li>
+        <li><a href="#services">Multiplayer &amp; LiveOps</a></li>
+        <li><a href="#services">Gamification</a></li>
+      </ul></div>
+      <div><h4>Company</h4><ul>
+        <li><a href="#games">Our Games</a></li>
+        <li><a href="#showcase">Showcase</a></li>
+        <li><a href="#templates">Unity Templates</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul></div>
+      <div><h4>Play Our Games</h4><ul>
+        <li><a href="https://play.google.com/store/apps/developer?id=Games+Fort+Studios" target="_blank" rel="noopener">Google Play Store ↗</a></li>
+        <li><a href="#games">Little League Legends</a></li>
+        <li><a href="#games">Skull Shooting Dungeon</a></li>
+        <li><a href="#games">Extreme Balancer 3D</a></li>
+      </ul></div>
+    </div>
+    <p class="copy">© 2026 GAMES FORT STUDIOS // ALL RIGHTS RESERVED // PRESS START</p>
+  </div>
+</footer>
+
+<script>
+// mobile menu
+const mb=document.getElementById('menuBtn'),menu=document.getElementById('menu');
+mb.addEventListener('click',()=>{const o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+menu.addEventListener('click',e=>{if(e.target.tagName==='A'){menu.classList.remove('open');mb.setAttribute('aria-expanded','false')}});
+
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// XP bar
+addEventListener('load',()=>{document.getElementById('xpfill').style.width='82%'});
+
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+// count-up stats
+function countUp(el){
+  const t=+el.dataset.count,s=el.dataset.suffix||'+',d=reduced?0:1300,st=performance.now();
+  function f(n){
+    const p=d?Math.min((n-st)/d,1):1;
+    const ease=1-Math.pow(1-p,3);
+    el.textContent=Math.round(t*ease)+(p===1?s:'');
+    if(p<1)requestAnimationFrame(f);
+  }
+  requestAnimationFrame(f);
+}
+const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){countUp(e.target);io2.unobserve(e.target)}}),{threshold:.5});
+document.querySelectorAll('.stat .num').forEach(el=>io2.observe(el));
+</script>
 </body>
 </html>
