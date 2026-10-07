@@ -200,8 +200,8 @@ footer{border-top:1px solid var(--line);padding:50px 0 40px;background:rgba(0,0,
       <h3>What PayNod collects</h3>
       <ul>
         <li><strong>Mobile number</strong> — to sign you in with a one-time code (OTP) and to link a staff member to the account their employer created for them.</li>
-        <li><strong>Name</strong> — your name, and the names and job roles of the people an employer adds to a group.</li>
-        <li><strong>Salary records</strong> — monthly salary amounts and the entries users record: salary paid, advance given and repayment, with the amount, date, payment method (cash, UPI or bank) and an optional reference number.</li>
+        <li><strong>Name</strong> — your name, the names and job roles of the people an employer adds to a group, and the names and mobile numbers of any other payers the employer adds.</li>
+        <li><strong>Salary records</strong> — monthly salary amounts and the entries users record: salary paid, advance given and repayment, with the amount, date, payment method (cash, UPI or bank), an optional reference number, and the name of who recorded and who accepted each entry.</li>
         <li><strong>Payment screenshots</strong> — only when a user chooses to attach one to an entry as proof of payment. PayNod opens the system file picker for that one image and does not read the rest of your gallery.</li>
         <li><strong>Notification token</strong> — an identifier issued to your device so that the app can notify you about entries.</li>
       </ul>
@@ -209,8 +209,9 @@ footer{border-top:1px solid var(--line);padding:50px 0 40px;background:rgba(0,0,
       <h3>Who can see PayNod records</h3>
       <ul>
         <li>An <strong>employer</strong> can see the groups they created and the records of the people in those groups.</li>
+        <li>An employer can add <strong>other payers</strong> to a group by mobile number, for example a family member who also pays the staff. A payer can see that group, the people in it and their records, and can record and answer entries there. They cannot see the employer's other groups. The employer can remove a payer at any time.</li>
         <li>A <strong>staff member</strong> can see only their own account. They cannot see other staff or other groups.</li>
-        <li>A <strong>payment screenshot</strong> can be seen only by the two people on that entry.</li>
+        <li>A <strong>payment screenshot</strong> can be seen only by the staff member on that entry and the people who pay in that group.</li>
       </ul>
       <p>When an employer adds you by your mobile number, your name, number, role and salary are stored in their group before you sign in. If you believe you were added by mistake, contact us and we will help.</p>
       <h3>Where PayNod data is kept</h3>
@@ -255,7 +256,7 @@ footer{border-top:1px solid var(--line);padding:50px 0 40px;background:rgba(0,0,
       <ul>
         <li><strong>For everyone</strong> — your login, your name, your mobile number and your notification token.</li>
         <li><strong>If you are an employer</strong> — the groups you created, the people you added to them, every salary, advance and repayment entry in those groups, and all attached payment screenshots.</li>
-        <li><strong>If you are a staff member</strong> — your login and profile.</li>
+        <li><strong>If you are a staff member or an added payer</strong> — your login and profile.</li>
       </ul>
       <h3>What is kept</h3>
       <ul>
