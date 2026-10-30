@@ -138,6 +138,15 @@ header{position:sticky;top:0;z-index:50;background:rgba(13,16,34,.82);backdrop-f
 .game p{color:var(--muted);font-size:14.5px;margin-bottom:16px}
 .pa-sub{font-family:var(--disp);font-weight:500;font-size:20px;margin:48px 0 20px}
 .pa-sub span{color:var(--muted);font-size:14px;font-family:var(--mono);margin-left:8px}
+.pa-card{cursor:pointer}
+.pa-card .shot{position:relative;display:grid;place-items:center;background:var(--surface-2)}
+.pa-card .shot img{width:auto;max-width:100%;height:100%;object-fit:contain}
+.pa-play{position:absolute;right:12px;bottom:12px;background:var(--gold);color:#0B0E1F;font-family:var(--mono);font-size:12px;font-weight:700;padding:6px 12px;border-radius:999px}
+.pa-modal{position:fixed;inset:0;z-index:1000;background:rgba(5,7,18,.88);display:none;align-items:center;justify-content:center;padding:16px}
+.pa-modal.open{display:flex}
+.pa-box{position:relative;width:min(420px,100%);height:min(90vh,820px);background:#000;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.pa-box iframe{width:100%;height:100%;border:0;display:block}
+.pa-close{position:absolute;top:8px;right:8px;z-index:2;width:36px;height:36px;border-radius:50%;border:0;background:rgba(11,14,31,.85);color:#fff;font-size:20px;cursor:pointer}
 .pa-ph{display:grid;place-items:center;font-size:44px;color:var(--gold)}
 .game .meta{display:flex;gap:10px;font-family:var(--mono);font-size:12px}
 .game .meta span{background:rgba(245,184,46,.12);color:var(--gold);padding:4px 10px;border-radius:6px}
@@ -368,7 +377,7 @@ footer{border-top:1px solid var(--line);padding:60px 0 36px;background:rgba(0,0,
     </div>
     <h3 class="pa-sub">Playable Ad Projects <span>// Built with Unity Playworks</span></h3>
     <div class="games-grid">
-      <article class="game rv"><div class="shot pa-ph">▶</div><div class="body"><h3>Playable Ad Project 1</h3><p>Short description of the playable ad — replace with project details.</p><div class="meta"><span>Unity Playworks</span></div></div></article>
+      <article class="game rv pa-card" data-playable="Resources/playables/pizza-delivery/index.html" data-title="Pizza &amp; Burger Delivery" tabindex="0" role="button" aria-label="Play Pizza &amp; Burger Delivery playable ad"><div class="shot"><img src="Resources/playables/pizza-delivery/icon.webp" alt="Pizza and Burger Delivery playable ad icon" loading="lazy"><span class="pa-play">▶ Play</span></div><div class="body"><h3>Pizza &amp; Burger Delivery</h3><p>Deliver hot pizza and burgers to hungry customers in this interactive playable ad. Tap to try it.</p><div class="meta"><span>Unity Playworks</span><span>▶ Playable</span></div></div></article>
     </div>
   </div>
 </section>
@@ -470,6 +479,21 @@ function countUp(el){
 }
 const io2=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){countUp(e.target);io2.unobserve(e.target)}}),{threshold:.5});
 document.querySelectorAll('.stat .num').forEach(el=>io2.observe(el));
+</script>
+<div class="pa-modal" id="paModal" role="dialog" aria-modal="true" aria-label="Playable ad"><div class="pa-box"><button class="pa-close" id="paClose" aria-label="Close">✕</button><iframe id="paFrame" title="Playable ad" allow="autoplay; fullscreen" allowfullscreen></iframe></div></div>
+<script>
+(function(){
+  var m=document.getElementById('paModal'),f=document.getElementById('paFrame');
+  function open(c){f.title=c.dataset.title;f.src=c.dataset.playable;m.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){m.classList.remove('open');f.src='about:blank';document.body.style.overflow='';}
+  document.querySelectorAll('.pa-card').forEach(function(c){
+    c.addEventListener('click',function(){open(c);});
+    c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(c);}});
+  });
+  document.getElementById('paClose').addEventListener('click',close);
+  m.addEventListener('click',function(e){if(e.target===m)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('open'))close();});
+})();
 </script>
 </body>
 </html>
