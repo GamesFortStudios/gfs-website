@@ -11,88 +11,94 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#0D1022;
-  --surface:#151935;
-  --surface-2:#1C2147;
-  --line:#2A2F5A;
-  --ink:#F0EFFA;
-  --muted:#9CA0C0;
+  --night:#0B0A24;
+  --deep:#06051A;
+  --panel:#14123A;
+  --line:#2C2870;
+  --ink:#F3F1FF;
+  --muted:#C4C2E0;
   --gold:#F5B82E;
-  --gold-deep:#D99A0B;
-  --violet:#6E5BFF;
-  --radius:14px;
-  --disp:'Unbounded',sans-serif;
+  --gold-deep:#B97F06;
+  --pink:#FF5C9A;
+  --cyan:#5CE1E6;
+  --px:'Press Start 2P',monospace;
+  --term:'VT323',monospace;
   --body:'Instrument Sans',system-ui,sans-serif;
-  --mono:'JetBrains Mono',monospace;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;
-  background-image:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(110,91,255,.14),transparent),
-  repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,.015) 40px);}
+body{background:var(--night);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.7;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
 .wrap{max-width:900px;margin:0 auto;padding:0 24px}
 img{max-width:100%;display:block}
 
-.quest{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;color:var(--gold);text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:18px}
-.quest::before{content:"▸";color:var(--violet)}
+.quest{font-family:var(--px);font-size:11px;line-height:1.6;color:var(--gold);text-transform:uppercase;margin-bottom:22px}
 
 /* ===== NAV ===== */
-header{position:sticky;top:0;z-index:50;background:rgba(13,16,34,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:1180px;margin:0 auto;padding:0 24px}
-.logo{font-family:var(--disp);font-weight:900;font-size:17px;display:flex;align-items:center;gap:11px}
+header{position:sticky;top:0;z-index:50;background:rgba(6,5,26,.92);backdrop-filter:blur(10px);border-bottom:3px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;max-width:1200px;margin:0 auto;padding:0 24px}
 .logo img{height:44px;width:auto}
-.btn{display:inline-block;font-weight:600;font-size:15px;padding:13px 26px;border-radius:10px;transition:transform .15s,box-shadow .15s;border:0;cursor:pointer;font-family:var(--body)}
-.btn-ghost{border:1px solid var(--line);color:var(--ink);background:transparent}
-.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.btn{display:inline-block;font-family:var(--px);font-size:10px;line-height:1.4;padding:14px 16px;border:2px solid #fff;cursor:pointer;transition:transform .08s,box-shadow .08s}
+.btn-ghost{background:transparent;color:#fff;box-shadow:0 4px 0 var(--line)}
+.btn-ghost:hover{transform:translateY(-2px);color:var(--gold);border-color:var(--gold)}
+.btn-ghost:active{transform:translateY(3px);box-shadow:0 1px 0 var(--line)}
 
 /* ===== HERO ===== */
-.phead{padding:80px 0 44px;border-bottom:1px solid var(--line)}
-.phead h1{font-family:var(--disp);font-weight:900;font-size:clamp(30px,5vw,48px);line-height:1.12;letter-spacing:-.015em;margin-bottom:16px}
-.phead h1 em{font-style:normal;color:var(--gold)}
-.updated{font-family:var(--mono);font-size:13px;color:var(--muted)}
-.updated b{color:var(--gold)}
+.top{background:linear-gradient(#06051A,#15104A);position:relative}
+.top::after{content:"";position:absolute;left:0;right:0;bottom:0;height:16px;background:repeating-linear-gradient(90deg,var(--night) 0 28px,transparent 28px 56px)}
+.phead{padding:84px 0 76px}
+.phead h1{font-family:var(--px);font-weight:400;font-size:clamp(24px,5.4vw,52px);line-height:1.3;color:#fff;text-shadow:0 .07em 0 var(--gold),0 .14em 0 #5B2A86;margin-bottom:34px}
+.phead h1 em{font-style:normal}
+.updated{font-family:var(--term);font-size:24px;color:var(--muted)}
+.updated b{color:var(--gold);font-weight:400}
+.intro{color:var(--muted);margin:48px 0 0;font-size:18px}
+.intro strong{color:var(--ink)}
 
 /* ===== TOC ===== */
-.toc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px 30px;margin:48px 0}
-.toc h2{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.toc{background:var(--panel);border:3px solid var(--line);padding:30px;margin:48px 0}
+.toc h2{font-family:var(--px);font-weight:400;font-size:11px;color:var(--gold);margin-bottom:22px}
 .toc ol{list-style:none;counter-reset:t;columns:2;column-gap:36px}
-.toc li{counter-increment:t;margin-bottom:11px;break-inside:avoid}
-.toc a{color:var(--muted);font-size:15px;transition:color .2s}
-.toc a::before{content:counter(t,decimal-leading-zero);font-family:var(--mono);font-size:12px;color:var(--violet);margin-right:10px}
+.toc li{counter-increment:t;break-inside:avoid}
+.toc a{display:block;padding:8px 0;color:var(--muted);font-size:16px}
+.toc a::before{content:counter(t,decimal-leading-zero);font-family:var(--term);font-size:22px;color:var(--pink);margin-right:12px}
 .toc a:hover{color:var(--gold)}
 
 /* ===== BODY ===== */
-.doc{padding:20px 0 40px}
-.doc section{padding:40px 0;border-bottom:1px solid var(--line)}
+.doc{padding:20px 0 60px}
+.doc section{padding:44px 0;border-bottom:2px dashed var(--line)}
 .doc section:last-child{border-bottom:0}
-.doc h2{font-family:var(--disp);font-weight:700;font-size:clamp(21px,2.6vw,28px);line-height:1.2;letter-spacing:-.01em;margin-bottom:8px;scroll-margin-top:90px}
-.doc h2 .n{font-family:var(--mono);font-size:14px;color:var(--gold);font-weight:600;margin-right:12px;vertical-align:middle}
-.doc h3{font-family:var(--disp);font-weight:500;font-size:17px;margin:26px 0 10px}
+.doc h2{font-family:var(--px);font-weight:400;font-size:clamp(14px,2vw,19px);line-height:1.7;color:#fff;margin-bottom:18px;scroll-margin-top:96px}
+.doc h2 .n{font-family:var(--term);font-size:1.7em;line-height:1;color:var(--gold);margin-right:14px;vertical-align:middle}
+.doc h3{font-family:var(--body);font-weight:700;font-size:18px;color:var(--gold);margin:28px 0 10px}
 .doc p{color:var(--muted);margin-bottom:16px}
-.doc a.inline{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.doc a.inline{color:var(--gold);text-decoration:underline;text-decoration-color:var(--pink);text-underline-offset:4px;overflow-wrap:anywhere}
+.doc a.inline:hover{color:#fff}
 .doc ul{list-style:none;margin:0 0 16px}
 .doc li{padding:8px 0 8px 30px;position:relative;color:var(--muted)}
-.doc li::before{content:"✦";position:absolute;left:4px;color:var(--gold)}
+.doc li::before{content:"";position:absolute;left:4px;top:18px;width:9px;height:9px;background:var(--gold)}
 .doc strong{color:var(--ink);font-weight:600}
-.callout{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:12px;padding:22px 26px;margin:22px 0}
+.callout{background:var(--panel);border:3px solid var(--gold);padding:22px 26px;margin:24px 0;box-shadow:8px 8px 0 var(--pink)}
 .callout p{margin:0;color:var(--ink)}
 
 /* ===== FOOTER ===== */
-footer{border-top:1px solid var(--line);padding:50px 0 40px;background:rgba(0,0,0,.22)}
-.fnav{display:flex;flex-wrap:wrap;gap:22px;margin-bottom:26px}
-.fnav a{color:var(--muted);font-size:14.5px}
+footer{background:#000;padding:56px 0 40px;position:relative}
+footer::before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px;background:repeating-linear-gradient(90deg,#000 0 28px,transparent 28px 56px)}
+.fnav{display:flex;flex-wrap:wrap;gap:6px 22px;margin-bottom:26px;justify-content:center}
+.fnav a{color:var(--muted);font-size:15px;padding:10px 0}
 .fnav a:hover{color:var(--gold)}
-.copy{font-family:var(--mono);font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:26px;text-align:center}
+.copy{font-family:var(--term);font-size:20px;color:var(--muted);border-top:2px dashed var(--line);padding-top:26px;text-align:center}
 
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
 @media(max-width:640px){
   .toc ol{columns:1}
-  .nav .btn{display:none}
+  .toc{padding:22px}
+  .phead{padding:60px 0 60px}
+  .callout{box-shadow:5px 5px 0 var(--pink)}
 }
 </style>
 </head>
@@ -103,23 +109,27 @@ footer{border-top:1px solid var(--line);padding:50px 0 40px;background:rgba(0,0,
     <a class="logo" href="index.html" aria-label="Games Fort Studios — home">
       <img src="assets/Images/CompanyLogo_Black.png" alt="Games Fort Studios logo">
     </a>
-    <a class="btn btn-ghost" href="index.html">← Back to site</a>
+    <a class="btn btn-ghost" href="index.html">◀ BACK TO SITE</a>
   </nav>
 </header>
 
 <main>
+<div class="top">
 <div class="wrap">
-
   <div class="phead">
     <p class="quest">Your data // How we handle it</p>
     <h1>Privacy <em>Policy</em></h1>
     <p class="updated">Last updated: <b>7 October 2026</b></p>
   </div>
+</div>
+</div>
 
-  <p style="color:var(--muted);margin:40px 0 0">This Privacy Policy explains how <strong style="color:var(--ink)">Games Fort Studios</strong> ("we", "us", "our") collects, uses, shares and protects information when you use our websites, games, apps and related services (together, the "Services"), including our salary ledger app <strong style="color:var(--ink)">PayNod</strong>. By using our Services, you agree to the practices described here.</p>
+<div class="wrap">
+
+  <p class="intro">This Privacy Policy explains how <strong>Games Fort Studios</strong> ("we", "us", "our") collects, uses, shares and protects information when you use our websites, games, apps and related services (together, the "Services"), including our salary ledger app <strong>PayNod</strong>. By using our Services, you agree to the practices described here.</p>
 
   <nav class="toc" aria-label="Contents">
-    <h2>Contents</h2>
+    <h2>CONTENTS</h2>
     <ol>
       <li><a href="#collect">Information We Collect</a></li>
       <li><a href="#use">How We Use Information</a></li>
